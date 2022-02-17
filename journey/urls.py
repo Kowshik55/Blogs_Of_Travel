@@ -18,8 +18,4 @@ urlpatterns = [
         path('comment/<int:pk>/edit/', views.comment_edit, name='comment_edit'),
         path('comment/<int:pk>/delete/', views.comment_delete, name='comment_delete'),
         path('travelblog_post/<int:post_id>', views.travelblog_post, name='travelblog_post'),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-else:
-    urlpatterns += staticfiles_urlpatterns()
+]
